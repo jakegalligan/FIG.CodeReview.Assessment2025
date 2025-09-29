@@ -12,6 +12,7 @@ namespace UserManagement.Services
             {
                 using var connection = new SqlConnection(_connectionString);
                 connection.Open();
+                Console.WriteLine("test");
 
                 var query = $"SELECT * FROM Users WHERE Id = {userId}";
                 using var command = new SqlCommand(query, connection);
